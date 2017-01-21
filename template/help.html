@@ -1,0 +1,39 @@
+<table width="310" border="0" align="center" cellpadding="0" cellspacing="2">
+        <tr>
+          <td colspan="3"><center>
+            <table width="310" border="0" align="center" cellpadding="0" cellspacing="2">
+              <tr>
+                <div id="reg" class="bigform hide"><span class="titleForm"><strong>卡號處理</strong></span>
+                <td width="29%" height="38"><center>
+                  選擇角色
+                </center></td>
+                <td width="71%" colspan="2"><center>
+                  <select id="select" name="select">
+                     {#foreach $T.table as record}
+                     	<option value="{$T.record.id}">{$T.record.name}</option>
+                     {#/for}
+                  </select>
+                </center></td>
+              </tr>
+              <tr>
+                <td height="34"><center>
+                  選擇操作
+                </center></td>
+                <td colspan="2"><center>
+                  <input name="unequip" type="checkbox" id="unequip" value="1" />
+                  <span>卸除所有裝備</span><br />
+                  <input name="warp" type="checkbox" id="warp" value="1" />
+                  <span>傳送到複活點</span>
+                </center></td>
+              </tr>
+              <tr>
+                <td colspan="3"><center>
+                  <input type="submit" name="Submit" value="    提 交    " />
+                  <input type="reset" name="Submit2" value="    重 置    " />
+                </center></td>
+              </tr>
+            </table>
+          </center></td>
+        </tr>
+      </table>
+      <input id="token" name="token" type="hidden" value="{$T.token}" />
